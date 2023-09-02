@@ -27,6 +27,10 @@ ngOnInit(){
   )
 }
 
+onEditItem(index: number){
+  this.slService.startedEditing.next(index);
+}
+
 ngOnDestroy(): void {
   this.idChangeSub.unsubscribe();
 }
